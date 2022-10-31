@@ -8,7 +8,7 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
-    public function create(Request $request) //ArticleRequest
+    public function create(ArticleRequest $request) //ArticleRequest
     {
         $article = new Article;
 
@@ -34,7 +34,7 @@ class ArticleController extends Controller
         dd($article);
     }
 
-    public function update(Request $request) //ArticleRequest
+    public function update(ArticleRequest $request)
     {
         $uuid = $request->uuid;
         $article = Article::findOrFail($uuid)->first()->fill($request->all())->save();
