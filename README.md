@@ -18,7 +18,7 @@ Follow the steps below to configure the Laravel project:
 ### Installation of Dependencies
 
 Run the following commands to install project dependencies:
-```
+```bash
 composer install
 npm install
 ```
@@ -28,7 +28,7 @@ npm install
 1. Create an `.env` file in the root folder of the project. You can copy the `.env.example` file and rename it to `.env.`
 
 2. Open the `.env` file and configure the database information according to your environment. Make sure you correctly set the following variables:
-```
+```php
 DB_CONNECTION=
 DB_HOST=
 DB_PORT=
@@ -40,10 +40,19 @@ DB_PASSWORD=
 ### Database Migration
 
 Run the following command to migrate the database tables:
-```
+```bash
 php artisan migrate
 ```
-### Tests
+
+### Run the Development Server
+To start the Laravel development server, run the following command:
+```bash
+php artisan serve
+```
+
+After running the above command, you will be able to access the project at [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Tests
 
 To perform E2E tests, enter the following user in the database:
 OBS: The tests that will be executed will be based on this user's information.
@@ -51,10 +60,9 @@ OBS: The tests that will be executed will be based on this user's information.
 INSERT INTO users (id, username, password) VALUES ('8653dff5-ef28-4f6b-b872-04895e0330da', 'liliane', 's3nh@Liliane');
 ```
 
-### Run the Development Server
-To start the Laravel development server, run the following command:
-```
-php artisan serve
-```
+### Testes de Mutação 
 
-After running the above command, you will be able to access the project at [http://localhost:8000](http://localhost:8000) in your browser.
+Para executar os testes, você pode usar o seguinte comando:
+
+```bash
+vendor/bin/phpunit
