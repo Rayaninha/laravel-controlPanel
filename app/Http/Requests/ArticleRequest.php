@@ -24,9 +24,9 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:30|max:70|unique:articles',
-            'resume' => 'required|min:50|max:100',
-            'text' => 'required|min:200',
+            'title' => 'required|min:10|max:70|unique:articles',
+            'resume' => 'required|min:20|max:100',
+            'text' => 'required|min:200|max:500',
         ];
     }
 }
