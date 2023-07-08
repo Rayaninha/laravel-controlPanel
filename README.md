@@ -43,6 +43,14 @@ Run the following command to migrate the database tables:
 ```
 php artisan migrate
 ```
+### Tests
+
+To perform E2E tests, enter the following user in the database:
+OBS: The tests that will be executed will be based on this user's information.
+```
+INSERT INTO users (id, username, password)
+VALUES ('8653dff5-ef28-4f6b-b872-04895e0330da', 'liliane', 's3nh@Liliane');
+```
 
 ### Run the Development Server
 To start the Laravel development server, run the following command:
