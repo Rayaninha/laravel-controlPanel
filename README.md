@@ -65,12 +65,26 @@ INSERT INTO users (id, username, password) VALUES ('8653dff5-ef28-4f6b-b872-0489
 
 ### Unit Tests
 
+Configuring the environment to run the `phpunit`.
+
+```bash
+composer require --dev phpunit/phpunit ^6.4
+```
+
 To run the tests, you can use the following command:
 
 ```bash
 vendor/bin/phpunit
 ```
 ### Mutation Tests
+
+Configuring the environment to run the `infection`.
+
+```bash
+composer require --dev infection/infection
+```
+
+For initial configuration when running `vendor/bin/infection`, you must select the `/tests` folder, you must not remove anything from the `/tests` directory, and for debugging, save the logs in some file, for example: `infection. log`.
 
 To run the tests, you can use the following command:
 
