@@ -63,14 +63,14 @@ INSERT INTO users (id, username, password) VALUES ('8653dff5-ef28-4f6b-b872-0489
 
 * Xdebug: Xdebug is an extension for PHP, and provides a range of features to improve the PHP development experience.
 
-### Testes de Unitários
+### Unit Tests
 
 To run the tests, you can use the following command:
 
 ```bash
 vendor/bin/phpunit
 ```
-### Testes de Mutação
+### Mutation Tests
 
 To run the tests, you can use the following command:
 
