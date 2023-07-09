@@ -7,6 +7,7 @@ use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
+use Illuminate\Support\Facades\Hash;
 
 class UserControllerTest extends TestCase
 {
@@ -41,5 +42,6 @@ class UserControllerTest extends TestCase
          */
         $user = User::where('username', $username)->first();
         $this->assertEquals($username, $user->username);
+        $this->assertTrue(Hash::check($password, $user->password));
     }
 }

@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "infection/infection": "^0.26.16",
+        "infection/infection": "^0.27.0",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
